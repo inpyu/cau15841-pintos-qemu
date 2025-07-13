@@ -1,0 +1,559 @@
+qemu-system-i386 -device isa-debug-exit -hda /tmp/VyGPSkeBl5.dsk -m 4 -net none -serial stdio
+PiLo hda1
+Loading..........
+Kernel command line: automated_warehouse 3 2A:2B:2C
+Pintos booting with 3,968 kB RAM...
+367 pages available in kernel pool.
+367 pages available in user pool.
+Calibrating timer...  422,707,200 loops/s.
+Boot complete.
+arguments list:automated_warehouse, 3, 2A:2B:2C
+implement automated warehouse!
+[R1] Reporting: pos=(6,5), payload=0, target=2, stage=0
+[R2] Reporting: pos=(6,5), payload=0, target=2, stage=0
+[R3] Reporting: pos=(6,5), payload=0, target=2, stage=0
+STEP_INFO_START::0
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C                        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:R1M0,R2M0,R3M0,
+A:
+B:
+C:
+STEP_INFO_DONE::0
+[CTRL] ↪️ Suggesting detour for R2.
+[CTRL] ↪️ Suggesting detour for R3.
+[CTRL] ↪️ Suggesting detour for R1.
+[R1]  Requesting move to (5,5)
+[R1] DETOUR: move to (5,5)
+[R1] Reporting: pos=(5,5), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,5)
+[R2] ❌ No safe detour. Staying put.
+[R2] DETOUR: move to (6,5)
+[R2] Reporting: pos=(6,5), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,5)
+[R3] ❌ No safe detour. Staying put.
+[R3] DETOUR: move to (6,5)
+[R3] Reporting: pos=(6,5), payload=0, target=2, stage=0
+STEP_INFO_START::1
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C                        R1   X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:R2M0,R3M0,
+A:
+B:
+C:
+STEP_INFO_DONE::1
+[CTRL] ↪️ Suggesting detour for R3.
+[CTRL] 🚀 Forcing R1 to break out.
+[R1]  Requesting move to (5,4)
+[R1] MOVE to (5,4)
+[R1] Reporting: pos=(5,4), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,5)
+[R2] WAIT — staying at (6,5)
+[R2] Reporting: pos=(6,5), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,5)
+[R3] ❌ No safe detour. Staying put.
+[R3] DETOUR: move to (6,5)
+[R3] Reporting: pos=(6,5), payload=0, target=2, stage=0
+STEP_INFO_START::2
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C                   R1   S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:R2M0,R3M0,
+A:
+B:
+C:
+STEP_INFO_DONE::2
+[R1]  Requesting move to (5,3)
+[R1] WAIT — staying at (5,4)
+[R1] Reporting: pos=(5,4), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,5)
+[R2] MOVE to (5,5)
+[R2] Reporting: pos=(5,5), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,5)
+[R3] WAIT — staying at (6,5)
+[R3] Reporting: pos=(6,5), payload=0, target=2, stage=0
+STEP_INFO_START::3
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C                   R1   R2   X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:R3M0,
+A:
+B:
+C:
+STEP_INFO_DONE::3
+[R1]  Requesting move to (5,3)
+[R1] MOVE to (5,3)
+[R1] Reporting: pos=(5,3), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,4)
+[R2] WAIT — staying at (5,5)
+[R2] Reporting: pos=(5,5), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,5)
+[R3] WAIT — staying at (6,5)
+[R3] Reporting: pos=(6,5), payload=0, target=2, stage=0
+STEP_INFO_START::4
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C              R1        R2   X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:R3M0,
+A:
+B:
+C:
+STEP_INFO_DONE::4
+[R1]  Requesting move to (5,2)
+[R1] WAIT — staying at (5,3)
+[R1] Reporting: pos=(5,3), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,4)
+[R2] MOVE to (5,4)
+[R2] Reporting: pos=(5,4), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,5)
+[R3] WAIT — staying at (6,5)
+[R3] Reporting: pos=(6,5), payload=0, target=2, stage=0
+STEP_INFO_START::5
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C              R1   R2   S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:R3M0,
+A:
+B:
+C:
+STEP_INFO_DONE::5
+[R1]  Requesting move to (5,2)
+[R1] MOVE to (5,2)
+[R1] Reporting: pos=(5,2), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,3)
+[R2] WAIT — staying at (5,4)
+[R2] Reporting: pos=(5,4), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,5)
+[R3] MOVE to (5,5)
+[R3] Reporting: pos=(5,5), payload=0, target=2, stage=0
+STEP_INFO_START::6
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C         R1        R2   R3   X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::6
+[R1]  Requesting move to (4,2)
+[R1] WAIT — staying at (5,2)
+[R1] Reporting: pos=(5,2), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,3)
+[R2] MOVE to (5,3)
+[R2] Reporting: pos=(5,3), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,4)
+[R3] WAIT — staying at (5,5)
+[R3] Reporting: pos=(5,5), payload=0, target=2, stage=0
+STEP_INFO_START::7
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C         R1   R2        R3   X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::7
+[R1]  Requesting move to (4,2)
+[R1] MOVE to (4,2)
+[R1] Reporting: pos=(4,2), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,2)
+[R2] WAIT — staying at (5,3)
+[R2] Reporting: pos=(5,3), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,4)
+[R3] MOVE to (5,4)
+[R3] Reporting: pos=(5,4), payload=0, target=2, stage=0
+STEP_INFO_START::8
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         R1   X    6         X    
+C              R2   R3   S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::8
+[R1]  Requesting move to (3,2)
+[R1] WAIT — staying at (4,2)
+[R1] Reporting: pos=(4,2), payload=0, target=2, stage=0
+[R2]  Requesting move to (5,2)
+[R2] MOVE to (5,2)
+[R2] Reporting: pos=(5,2), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,3)
+[R3] WAIT — staying at (5,4)
+[R3] Reporting: pos=(5,4), payload=0, target=2, stage=0
+STEP_INFO_START::9
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         R1   X    6         X    
+C         R2        R3   S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::9
+[R1]  Requesting move to (3,2)
+[R1] MOVE to (3,2)
+[R1] Item 2 picked up.
+[R1] Reporting: pos=(3,2), payload=2, target=2, stage=1
+[R2]  Requesting move to (4,2)
+[R2] WAIT — staying at (5,2)
+[R2] Reporting: pos=(5,2), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,3)
+[R3] MOVE to (5,3)
+[R3] Reporting: pos=(5,3), payload=0, target=2, stage=0
+STEP_INFO_START::10
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         R1M2 X    5         X    
+X         3    X    6         X    
+C         R2   R3        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::10
+[R1]  Requesting move to (2,2)
+[R1] WAIT — staying at (3,2)
+[R1] Reporting: pos=(3,2), payload=2, target=2, stage=1
+[R2]  Requesting move to (4,2)
+[R2] MOVE to (4,2)
+[R2] Reporting: pos=(4,2), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,2)
+[R3] WAIT — staying at (5,3)
+[R3] Reporting: pos=(5,3), payload=0, target=2, stage=0
+STEP_INFO_START::11
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         R1M2 X    5         X    
+X         R2   X    6         X    
+C              R3        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::11
+[R1]  Requesting move to (2,2)
+[R1] MOVE to (2,2)
+[R1] Reporting: pos=(2,2), payload=2, target=2, stage=1
+[R2]  Requesting move to (3,2)
+[R2] WAIT — staying at (4,2)
+[R2] Reporting: pos=(4,2), payload=0, target=2, stage=0
+[R3]  Requesting move to (5,2)
+[R3] MOVE to (5,2)
+[R3] Reporting: pos=(5,2), payload=0, target=2, stage=0
+STEP_INFO_START::12
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         R1M2 X    4         X    
+B         2    X    5         X    
+X         R2   X    6         X    
+C         R3             S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::12
+[R1]  Requesting move to (1,2)
+[R1] WAIT — staying at (2,2)
+[R1] Reporting: pos=(2,2), payload=2, target=2, stage=1
+[R2]  Requesting move to (3,2)
+[R2] MOVE to (3,2)
+[R2] Item 2 picked up.
+[R2] Reporting: pos=(3,2), payload=2, target=2, stage=1
+[R3]  Requesting move to (4,2)
+[R3] WAIT — staying at (5,2)
+[R3] Reporting: pos=(5,2), payload=0, target=2, stage=0
+STEP_INFO_START::13
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         R1M2 X    4         X    
+B         R2M2 X    5         X    
+X         3    X    6         X    
+C         R3             S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::13
+[R1]  Requesting move to (1,2)
+[R1] MOVE to (1,2)
+[R1] Reporting: pos=(1,2), payload=2, target=2, stage=1
+[R2]  Requesting move to (3,1)
+[R2] WAIT — staying at (3,2)
+[R2] Reporting: pos=(3,2), payload=2, target=2, stage=1
+[R3]  Requesting move to (4,2)
+[R3] MOVE to (4,2)
+[R3] Reporting: pos=(4,2), payload=0, target=2, stage=0
+STEP_INFO_START::14
+MAP_INFO::
+X    X    X    X    X    X    X    
+A         R1M2 7              X    
+X         1    X    4         X    
+B         R2M2 X    5         X    
+X         R3   X    6         X    
+C                        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::14
+[R1]  Requesting move to (1,1)
+[R1] WAIT — staying at (1,2)
+[R1] Reporting: pos=(1,2), payload=2, target=2, stage=1
+[R2]  Requesting move to (3,1)
+[R2] MOVE to (3,1)
+[R2] Reporting: pos=(3,1), payload=2, target=2, stage=1
+[R3]  Requesting move to (3,2)
+[R3] WAIT — staying at (4,2)
+[R3] Reporting: pos=(4,2), payload=0, target=2, stage=0
+STEP_INFO_START::15
+MAP_INFO::
+X    X    X    X    X    X    X    
+A         R1M2 7              X    
+X         1    X    4         X    
+B    R2M2 2    X    5         X    
+X         R3   X    6         X    
+C                        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::15
+[R1]  Requesting move to (1,1)
+[R1] MOVE to (1,1)
+[R1] Reporting: pos=(1,1), payload=2, target=2, stage=1
+[R2]  Requesting move to (3,0)
+[R2] WAIT — staying at (3,1)
+[R2] Reporting: pos=(3,1), payload=2, target=2, stage=1
+[R3]  Requesting move to (3,2)
+[R3] MOVE to (3,2)
+[R3] Item 2 picked up.
+[R3] Reporting: pos=(3,2), payload=2, target=2, stage=1
+STEP_INFO_START::16
+MAP_INFO::
+X    X    X    X    X    X    X    
+A    R1M2      7              X    
+X         1    X    4         X    
+B    R2M2 R3M2 X    5         X    
+X         3    X    6         X    
+C                        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:
+C:
+STEP_INFO_DONE::16
+[R1]  Requesting move to (1,0)
+[R1] WAIT — staying at (1,1)
+[R1] Reporting: pos=(1,1), payload=2, target=2, stage=1
+[R2]  Requesting move to (3,0)
+[R2] MOVE to (3,0)
+[R2] Delivered to zone B.
+[R2] Reporting: pos=(3,0), payload=2, target=2, stage=2
+[R2] Transport complete at (3,0). Exiting.
+[R3]  Requesting move to (4,2)
+[R3] WAIT — staying at (3,2)
+[R3] Reporting: pos=(3,2), payload=2, target=2, stage=1
+STEP_INFO_START::17
+MAP_INFO::
+X    X    X    X    X    X    X    
+A    R1M2      7              X    
+X         1    X    4         X    
+B         R3M2 X    5         X    
+X         3    X    6         X    
+C                        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:
+B:R2M2,
+C:
+STEP_INFO_DONE::17
+[CTRL] ✅ R2 has completed delivery.
+[R1]  Requesting move to (1,0)
+[R1] MOVE to (1,0)
+[R1] Delivered to zone A.
+[R1] Reporting: pos=(1,0), payload=2, target=2, stage=2
+[R1] Transport complete at (1,0). Exiting.
+[R3]  Requesting move to (4,2)
+[R3] MOVE to (4,2)
+[R3] Reporting: pos=(4,2), payload=2, target=2, stage=1
+STEP_INFO_START::18
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         R3M2 X    6         X    
+C                        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:R1M2,
+B:R2M2,
+C:
+STEP_INFO_DONE::18
+[CTRL] 🚀 Forcing R3 to break out.
+[CTRL] ✅ R1 has completed delivery.
+[R3]  Requesting move to (5,2)
+[R3] MOVE to (5,2)
+[R3] Reporting: pos=(5,2), payload=2, target=2, stage=1
+STEP_INFO_START::19
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C         R3M2           S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:R1M2,
+B:R2M2,
+C:
+STEP_INFO_DONE::19
+[CTRL] 🚀 Forcing R3 to break out.
+[R3]  Requesting move to (5,1)
+[R3] MOVE to (5,1)
+[R3] Reporting: pos=(5,1), payload=2, target=2, stage=1
+STEP_INFO_START::20
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C    R3M2                S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:R1M2,
+B:R2M2,
+C:
+STEP_INFO_DONE::20
+[CTRL] 🚀 Forcing R3 to break out.
+[R3]  Requesting move to (5,0)
+[R3] MOVE to (5,0)
+[R3] Delivered to zone C.
+[R3] Reporting: pos=(5,0), payload=2, target=2, stage=2
+[R3] Transport complete at (5,0). Exiting.
+STEP_INFO_START::21
+MAP_INFO::
+X    X    X    X    X    X    X    
+A              7              X    
+X         1    X    4         X    
+B         2    X    5         X    
+X         3    X    6         X    
+C                        S    X    
+X    X    X    X    X    W    X    
+
+PLACE_INFO::
+W:
+A:R1M2,
+B:R2M2,
+C:R3M2,
+STEP_INFO_DONE::21
+[CTRL] 🚀 Forcing R3 to break out.
+[CTRL] ✅ R3 has completed delivery.
+All robots have completed delivery. Shutting down simulation.
